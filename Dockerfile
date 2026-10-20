@@ -1,5 +1,5 @@
-# Imagen base con PHP 8.2 y FPM
-FROM php:8.2-fpm
+# Imagen base con PHP 8.3 y FPM
+FROM php:8.3-fpm
 
 # Instalar dependencias del sistema y extensiones necesarias para Laravel y MySQL
 RUN apt-get update && apt-get install -y \
