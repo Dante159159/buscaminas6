@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     nginx
 
 # Instalar Node.js para compilar estilos (Vite / Tailwind)
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs
 
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
