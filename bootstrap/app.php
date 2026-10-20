@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Confiar en el proxy inverso de Render para mantener HTTPS y sesiones estables
+        $middleware->trustProxies(at: '*');
+
         // Permite que las llamadas fetch desde el navegador lleven cookies
         // y compartan la sesión con las vistas Blade
         $middleware->api(prepend: [
